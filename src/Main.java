@@ -1,0 +1,27 @@
+public class Main {
+    public static void main(String[] args) {
+        StudentService service = new StudentService();
+        service.printStudent();
+        SecondLargest secondLargest =new SecondLargest ();
+        secondLargest.findSecondLargest();
+        SortAnArray sorter = new SortAnArray();
+        sorter.sortAnArray();
+        MinMaxSalary  minMaxSalary = new MinMaxSalary();
+        minMaxSalary.minAndMaxSalary();
+        FibonacciSeries fibonacciSeries = new FibonacciSeries();
+        fibonacciSeries.fibonacciSeries();
+        CheckPrime checkPrime = new CheckPrime ();
+        checkPrime.checkPrime();
+        AlternatePrimeNumber alternatePrimeNumber = new AlternatePrimeNumber ();
+        alternatePrimeNumber.alternatePrimeNumber();
+        ReverseASentance  reverseASentance = new ReverseASentance ();
+        reverseASentance.reverseASentance();
+        ReverseAnArray  reverseAnArray = new ReverseAnArray();
+        reverseAnArray.reverseAnArray();
+        CharacterCount  characterCount = new CharacterCount ();
+        characterCount.characterCount ();
+        System.out.println("\n--- Kth Smallest ---");
+        KthSmallest kthSmallest = new KthSmallest();
+        kthSmallest.kthSmallest();
+    }
+}
