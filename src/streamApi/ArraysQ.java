@@ -12,6 +12,6 @@ public class ArraysQ {
         // Second Highest
         Integer secondHig = numbers.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
         System.out.println(duplicate);
-        System.out.println(secondHig);
+        System.out.println(secondHig);;
     }
 }
