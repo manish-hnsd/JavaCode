@@ -1,6 +1,6 @@
 public class SecondLargest {
     int arr[] = new int[]{ 2, 22, 44, 3 };
-    int first = 0, second = 0;
+    int first = Integer.MIN_VALUE, second = Integer.MAX_VALUE;
     void findSecondLargest() {
         for(int i = 0; i < arr.length; i++){
             if (arr[i] > first){

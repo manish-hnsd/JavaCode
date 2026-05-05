@@ -23,5 +23,8 @@ public class Main {
         System.out.println("\n--- Kth Smallest ---");
         KthSmallest kthSmallest = new KthSmallest();
         kthSmallest.kthSmallest();
+        System.out.println("\n--- 2nd Smallest ---");
+        SecondSmallest secondSmallest = new SecondSmallest();
+        secondSmallest.getSecondSmallest();
     }
 }
