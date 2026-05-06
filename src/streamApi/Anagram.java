@@ -5,26 +5,30 @@ import java.util.stream.Collectors;
 
 public class Anagram {
     public static void main(String[] args) {
-        String s = "anagram";
-        String t = "nagaram";
+        String s = "apple" ;//"anagram";
+        String t = "apples"; //"nagaram";
         // Output
         System.out.println(isAnagram(s, t)); // true
     }
+    // Time: O(n) Space: O(1)
+    // without using inbuilt function
     public static boolean isAnagram(String s1, String s2) {
         if(s1.length() != s2.length())
             return false;
+        // Create a frequency counter for ASCII characters
+        int[] count = new int[256];
 
-        // Store frequency map of first string in result1
-        Map<Character, Long> result1 = s1.chars().mapToObj(c -> (char) c).collect(Collectors
-                .groupingBy(ch -> ch, Collectors.counting()));
-
-        // Store frequency map of second string in result2
-        Map<Character, Long> result2 = s2.chars().mapToObj(c -> (char) c).collect(Collectors
-                .groupingBy(ch -> ch, Collectors.counting()));
-
-        // Compare both maps
-        boolean result = result1.equals(result2);
-        return result;
+        //Pass through both the strings
+        for (int i = 0; i < s1.length(); i++){
+            count[s1.charAt(i)]++;
+            count[s2.charAt(i)]--;
+        }
+        // Check if all counts returned to zero
+        for (int val : count){
+            if (val != 0){
+                return false;
+            }
+        }
+        return true;
     }
-
 }
