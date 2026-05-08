@@ -1,4 +1,4 @@
-package dsa.string;
+package dsa.TwoPointers;
 
 public class threeSum {
 }

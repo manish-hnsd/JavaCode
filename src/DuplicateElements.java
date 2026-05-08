@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class DuplicateElements {
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3, 4, 7, 8};
+        int[] nums = {1, 2, 3, 4, 1, 2, 7, 8};
 
         System.out.println("Input Array: " + Arrays.toString(nums));
         findDuplicates(nums);
@@ -15,7 +15,7 @@ public class DuplicateElements {
         Set<Integer> duplicate = new HashSet<>();
 
         for (int num : nums){
-            if (!seen.contains(num)){ // .add() returns false if the element already exists in the set
+            if (!seen.add(num)){ // .add() returns false if the element already exists in the set
                 duplicate.add(num);
             }
         }
