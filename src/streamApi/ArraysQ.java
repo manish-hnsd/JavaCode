@@ -10,13 +10,15 @@ public class ArraysQ {
         // Duplicate Number
         List<Integer> duplicate = numbers.stream().filter(n-> !set.add(n)).distinct().collect(Collectors.toList());
         // Second Highest
-        Integer secondHig = numbers.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
+//        Integer secondHig = numbers.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
+        Integer secHig = numbers.stream().sorted((a,b) ->  b  - a).skip(1).findFirst().get();
         System.out.println(duplicate);
-        System.out.println(secondHig);
+        System.out.println(secHig);
+//        System.out.println(secondHig);
         // Second Smallest
-        Optional<Integer> secondSmall = numbers.stream().distinct().sorted().skip(1).findFirst();
+        Optional<Integer> secondSmall = numbers.stream().sorted().distinct().skip(1).findFirst();
         if(secondSmall.isPresent()){
-            System.out.println("Second Second Small No is :" + secondSmall.get());
+            System.out.println("Second Small No is :" + secondSmall.get());
         }else
         System.out.println("Second Smallest Not Present");
     }
