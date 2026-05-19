@@ -25,7 +25,7 @@ public class MergeIntervals {
     }
     // Time O(nlogn)
     public static void main(String[] args) {
-        int[][] intervals = new int[][]{{1,3},{2,6},{8,10},{15,18}}; // Output: [[1,6],[8,10],[15,18]]
+        int[][] intervals = new int[][]{{1,2},{2,6},{8,10},{15,18},{15,22}}; // Output: [[1,6],[8,10],[15,18]]
         System.out.println(Arrays.deepToString(merge(intervals)));
     }
 }

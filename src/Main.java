@@ -8,8 +8,6 @@ public class Main {
         sorter.sortAnArray();
         MinMaxSalary  minMaxSalary = new MinMaxSalary();
         minMaxSalary.minAndMaxSalary();
-        FibonacciSeries fibonacciSeries = new FibonacciSeries();
-        fibonacciSeries.fibonacciSeries();
         CheckPrime checkPrime = new CheckPrime ();
         checkPrime.checkPrime();
         AlternatePrimeNumber alternatePrimeNumber = new AlternatePrimeNumber ();
