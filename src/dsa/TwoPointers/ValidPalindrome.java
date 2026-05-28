@@ -4,7 +4,7 @@ public class ValidPalindrome {
     public static void main(String[] args) {
         String s = "Was it a car or a cat I saw?";
         boolean palindrome = isPalindrome(s);
-        System.out.println(palindrome);
+        System.out.println(palindrome);  // Output: true
     }
     public static boolean isPalindrome(String s) {
         int left = 0, right =s.length() - 1;
