@@ -3,7 +3,7 @@ package dsa.TwoPointers;
 public class ContainerWithMostWater {
     public static void main(String[] args) {
 //        int[] heights = {1,7,2,5,4,7,3,6};  // Outpot = 36
-        int[] heights = {1,3,2,5,2};
+        int[] heights = {1,3,2,5,2}; // 6
         int result = maxArea(heights);
         System.out.println(result);
     }
