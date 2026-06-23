@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class TwoSum {
     public static void main(String[] args) {
         int[] nums = {3,4,5,6};
-        int target = 7;  // Output: [0,1]
+        int target = 8;  // Output: [0,1]
         System.out.println(Arrays.toString(twoSum(nums, target)));
         // ⏱️ Time Complexity: O(n2)
         /*for(int i = 0; i < nums.length; i++){

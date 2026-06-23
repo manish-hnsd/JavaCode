@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class TopKFreqElement {
     public static void main(String[] args) {
-        int arr[] = {1,1,1,1,2,2,2,2,3,3,4,4,5,5,5}; // Input
+        int arr[] = {1,1,1,2,2,3,3}; // Input
         int k  = 2; //Output [1,2]
         // Count Freq
         Map<Integer, Integer>  map = new HashMap<>(); // Time Complexity O(n)
@@ -15,7 +15,7 @@ public class TopKFreqElement {
         }
 
         PriorityQueue<Integer> pq = new PriorityQueue<>(
-                (a,b) -> map.get(b) - map.get(a) // This tells the PQ to prioritize elements with higher frequencies.
+//                (a,b) -> map.get(b) - map.get(a) // This tells the PQ to prioritize elements with higher frequencies.
         );
         pq.addAll(map.keySet()); // Time Complexity O(d \log d) //Keys {1, 2, 3} are added.Because it's a
         // Max-Heap based on frequency, the PQ internal structure looks like this: [1, 2, 3] (since 3 > 2 > 1).

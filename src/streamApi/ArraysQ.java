@@ -9,10 +9,10 @@ public class ArraysQ {
         Set<Integer> set = new HashSet<>();
         // Duplicate Number
         List<Integer> duplicate = numbers.stream().filter(n-> !set.add(n)).distinct().collect(Collectors.toList());
-        // Second Highest
-//        Integer secondHig = numbers.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
-        Integer secHig = numbers.stream().sorted((a,b) ->  b  - a).skip(1).findFirst().get();
         System.out.println(duplicate);
+        // Second Highest
+//        Integer secHig = numbers.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
+        Integer secHig = numbers.stream().sorted((a,b) ->  b  - a).skip(1).findFirst().get();
         System.out.println(secHig);
 //        System.out.println(secondHig);
         // Second Smallest
